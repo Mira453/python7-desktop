@@ -86,23 +86,18 @@ class ExpressionTree:
                 self.print_tree(node.left, level + 1, prefix="L--- ")
                 self.print_tree(node.right, level + 1, prefix="R--- ")
 
-# Матриця суміжності (приклад з таблиці 3)
 matrix = [
-    [1, 0, 1, 0, 0],
+    [1, 0, 1, 1, 0],
     [1, 1, 0, 0, 0],
+    [1, 1, 0, 1, 1],
     [1, 1, 1, 0, 1],
-    [1, 0, 0, 1, 0],
     [1, 0, 0, 0, 1]
 ]
-
-# Арифметичний вираз (приклад з таблиці 4)
 expression = "((2+5)*4-7)/3"
 
-# Перевірка орієнтованості графа
 print("\nПеревірка орієнтованості графа:")
 check_orientation(matrix)
 
-# Побудова дерева та обходи
 print("\nПобудова та обхід дерева для виразу:", expression)
 expr_tree = ExpressionTree(expression)
 
